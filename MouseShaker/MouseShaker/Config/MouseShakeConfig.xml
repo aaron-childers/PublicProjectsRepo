@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MouseShakerConfig>
+	<ShakeDistance>10</ShakeDistance>
+	<ShakeDurationMilliseconds>2000</ShakeDurationMilliseconds>
+	<IntervalMilliseconds>5000</IntervalMilliseconds>
+</MouseShakerConfig>

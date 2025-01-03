@@ -1,0 +1,43 @@
+﻿<Window x:Class="MouseShaker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mouse Shaker" Height="300" Width="350"
+        Background="{StaticResource BackgroundBrush}"
+        Icon="Resources\ShakingComputer.ico">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Shake Distance -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10,0,0">
+            <Label Content="Shake Distance:" VerticalAlignment="Center" Width="150" Foreground="{StaticResource TextBrush}" />
+            <TextBox x:Name="ShakeDistanceTextBox" Width="150" Style="{StaticResource ModernTextBox}" />
+        </StackPanel>
+
+        <!-- Shake Duration -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0">
+            <Label Content="Shake Duration (ms):" VerticalAlignment="Center" Width="150" Foreground="{StaticResource TextBrush}" />
+            <TextBox x:Name="ShakeDurationTextBox" Width="150" Style="{StaticResource ModernTextBox}" />
+        </StackPanel>
+
+        <!-- Interval -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0">
+            <Label Content="Interval (ms):" VerticalAlignment="Center" Width="150" Foreground="{StaticResource TextBrush}" />
+            <TextBox x:Name="IntervalTextBox" Width="150" Style="{StaticResource ModernTextBox}" />
+        </StackPanel>
+
+        <!-- Apply Settings Button -->
+        <Button x:Name="ApplyButton" Content="Apply Settings" Grid.Row="3" Margin="0,10,0,0"
+                Style="{StaticResource ModernButton}" Click="ApplyButton_Click" />
+
+        <!-- Toggle Start/Stop -->
+        <ToggleButton x:Name="StartStopToggle" Content="Start Shaking" Grid.Row="4" VerticalAlignment="Center"
+                      HorizontalAlignment="Center" Width="150" Height="40"
+                      Style="{StaticResource ModernToggleButton}" Click="StartStopButton_Click" />
+    </Grid>
+</Window>
